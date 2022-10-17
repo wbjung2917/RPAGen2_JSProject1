@@ -1,0 +1,58 @@
+button{    
+    width : 80px;
+    height : 80px;
+    margin : 2px;
+    border : #1D2F42 2px solid;
+    border-radius: 8px;
+    font-size : 20px;
+    background-color: #9CE9FF;
+    color : #1D2F42;
+}
+button:active{    
+    background-color: #1D2F42;
+    color : #9CE9FF;
+}
+#contents{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#title{
+    font-size: 50px;
+    color : #1D2F42;
+    margin : 20px;
+}
+#formula-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width : 312px;
+    min-height: 80px;
+    border : #1D2F42 2px solid;
+    border-radius: 8px;
+    margin-bottom : 20px;
+    padding : 10px;
+    text-align: right;
+    vertical-align: bottom;
+}
+#history{
+    width : 312px;
+    font-size : 20px;
+    color : #596270;
+    margin: 0;
+}
+#formula{
+    width : 312px;
+    word-wrap: break-word;
+    font-weight: bold;
+    font-size : 40px;
+    color : #1D2F42;
+    margin: 0;
+}
+#line{
+    display: flex;
+}
+#clear{
+    width : 332px;
+}
