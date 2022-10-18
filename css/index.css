@@ -50,9 +50,20 @@ button:active{
     color : #1D2F42;
     margin: 0;
 }
-#line{
+#button-group{
     display: flex;
 }
-#clear{
-    width : 332px;
+#line{
+    display: flex;
+    flex-direction: column;
+}
+#equal{
+    height : 248px;
+}
+#profile-img{
+    width : 76px;
+    height : 76px;
+    margin : 2px;
+    border : #cccccc 2px solid;
+    border-radius: 20px;
 }

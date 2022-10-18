@@ -11,39 +11,38 @@
     <div id="contents">
         <h1 id="title">Calculator</h1>
         <div id="formula-box">
-            <p id="history">hihi</p>
-            <p id="formula">asdfasdf</p>
+            <p id="history"></p>
+            <p id="formula"></p>
         </div>
-        <button class="operator" onclick="clickClear()" id="clear">C</button>
-        <div id="line">
-            <button class="operator" id="frac">1/x</button>
-            <button class="operator" id="square">x<sup>2</sup></button>
-            <button class="operator" id="sqrt">sqrt(x)</button>
-            <button class="operator" id="div">÷</button>
-        </div>
-        <div id="line">
-            <button class="number" onclick="clickNumbers(this)" id="7">7</button>
-            <button class="number" onclick="clickNumbers(this)" id="8">8</button>
-            <button class="number" onclick="clickNumbers(this)" id="9">9</button>
-            <button class="operator" id="mul">×</button>
-        </div>
-        <div id="line">
-            <button class="number" onclick="clickNumbers(this)" id="4">4</button>
-            <button class="number" onclick="clickNumbers(this)" id="5">5</button>
-            <button class="number" onclick="clickNumbers(this)" id="6">6</button>
-            <button class="operator" id="minus">-</button>
-        </div>
-        <div id="line">
-            <button class="number" onclick="clickNumbers(this)" id="1">1</button>
-            <button class="number" onclick="clickNumbers(this)" id="2">2</button>
-            <button class="number" onclick="clickNumbers(this)" id="3">3</button>
-            <button class="operator" id="plus">＋</button>
-        </div>
-        <div id="line">
-            <button class="operator" id="negate">+/-</button>
-            <button class="number" onclick="clickNumbers(this)" id="0">0</button>
-            <button class="number" onclick="clickNumbers(this)" id="dot">.</button>
-            <button class="operator" id="equal">=</button>
+        <div id="button-group">            
+            <div id="line">
+                <button class="operator" onclick="clickOperators(this)" id="plus">+</button>
+                <button class="number" onclick="clickNumbers(this)" id="7">7</button>
+                <button class="number" onclick="clickNumbers(this)" id="4">4</button>
+                <button class="number" onclick="clickNumbers(this)" id="1">1</button>
+                <img src="img/Orca_Profile.png" id="profile-img">
+            </div>
+            <div id="line">
+                <button class="operator" onclick="clickOperators(this)" id="minus">-</button>
+                <button class="number" onclick="clickNumbers(this)" id="8">8</button>
+                <button class="number" onclick="clickNumbers(this)" id="5">5</button>
+                <button class="number" onclick="clickNumbers(this)" id="2">2</button>
+                <button class="number" onclick="clickNumbers(this)" id="0">0</button>
+            </div>
+            <div id="line">
+                <button class="operator" onclick="clickOperators(this)" id="mul">*</button>
+                <button class="number" onclick="clickNumbers(this)" id="9">9</button>
+                <button class="number" onclick="clickNumbers(this)" id="6">6</button>
+                <button class="number" onclick="clickNumbers(this)" id="3">3</button>
+                <button class="number" onclick="clickNumbers(this)" id="dot">.</button>
+            </div>
+            <div id="line">
+                <button class="operator" onclick="clickOperators(this)" id="div">÷</button> 
+                <button class="operator" onclick="clickClear()" id="clear">C</button>
+                <button class="operator" id="equal">=</button>
+            </div>
+            <div id="line">
+            </div>
         </div>
     </div>
     <script type="text/javascript" src="js/index.js"></script>
