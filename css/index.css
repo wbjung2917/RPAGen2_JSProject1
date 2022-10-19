@@ -1,10 +1,20 @@
+html{
+    height : 100%;
+}
+body{
+    height : 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 button{    
     width : 80px;
     height : 80px;
     margin : 2px;
     border : #1D2F42 2px solid;
     border-radius: 8px;
-    font-size : 20px;
+    font-size : 30px;
+    font-weight: bold;
     background-color: #9CE9FF;
     color : #1D2F42;
 }
@@ -16,11 +26,19 @@ button:active{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #dcf7ff;
+    padding : 10px 20px 20px 20px;
+    border : #1D2F42 3px solid;
+    border-radius: 10px;
+}
+#head{
+    display :flex;
+    align-items: center;
 }
 #title{
     font-size: 50px;
     color : #1D2F42;
-    margin : 20px;
+    margin : 20px 5px;
 }
 #formula-box{
     display: flex;
@@ -29,6 +47,7 @@ button:active{
     align-items: flex-end;
     width : 312px;
     min-height: 80px;
+    background-color: white;
     border : #1D2F42 2px solid;
     border-radius: 8px;
     margin-bottom : 20px;
@@ -53,6 +72,11 @@ button:active{
 #button-group{
     display: flex;
 }
+#backspace{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 #line{
     display: flex;
     flex-direction: column;
@@ -61,9 +85,32 @@ button:active{
     height : 248px;
 }
 #profile-img{
-    width : 76px;
-    height : 76px;
-    margin : 2px;
-    border : #cccccc 2px solid;
-    border-radius: 20px;
+    width : 70px;
+    height : 70px;
+    margin : 20px 5px;
+    border-radius: 10px;
+}
+#backspace-img{    
+    width : 30px;
+    height : 30px;
+}
+#how-to-use{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width : 332px;
+    height: 200px;
+    margin : 10px;
+    background-color:#1D2F42;
+    color :#9CE9FF;
+    border-radius: 10px;
+}
+#how-to-use-title{
+    margin : 10px;
+    text-align: center;
+}
+#how-to-use-content{
+    width : 300px;
+    margin : 0;
 }

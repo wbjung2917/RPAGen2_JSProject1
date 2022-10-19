@@ -8,41 +8,53 @@
     <title>Calculator</title>
 </head>
 <body>
-    <div id="contents">
-        <h1 id="title">Calculator</h1>
+    <div id="contents"> 
+        <div id="head">            
+            <img src="img/Orca_Profile.png" id="profile-img">
+            <h1 id="title">Calculator</h1>
+        </div>
         <div id="formula-box">
             <p id="history"></p>
             <p id="formula"></p>
         </div>
         <div id="button-group">            
             <div id="line">
-                <button class="operator" onclick="clickOperators(this)" id="plus">+</button>
-                <button class="number" onclick="clickNumbers(this)" id="7">7</button>
-                <button class="number" onclick="clickNumbers(this)" id="4">4</button>
-                <button class="number" onclick="clickNumbers(this)" id="1">1</button>
-                <img src="img/Orca_Profile.png" id="profile-img">
+                <button class="operator" id="plus">+</button>
+                <button class="number" id="7">7</button>
+                <button class="number" id="4">4</button>
+                <button class="number" id="1">1</button>
+                <button class="clear" id="clear">C</button>
             </div>
             <div id="line">
-                <button class="operator" onclick="clickOperators(this)" id="minus">-</button>
-                <button class="number" onclick="clickNumbers(this)" id="8">8</button>
-                <button class="number" onclick="clickNumbers(this)" id="5">5</button>
-                <button class="number" onclick="clickNumbers(this)" id="2">2</button>
-                <button class="number" onclick="clickNumbers(this)" id="0">0</button>
+                <button class="operator" id="minus">-</button>
+                <button class="number" id="8">8</button>
+                <button class="number" id="5">5</button>
+                <button class="number" id="2">2</button>
+                <button class="number" id="0">0</button>
             </div>
             <div id="line">
-                <button class="operator" onclick="clickOperators(this)" id="mul">*</button>
-                <button class="number" onclick="clickNumbers(this)" id="9">9</button>
-                <button class="number" onclick="clickNumbers(this)" id="6">6</button>
-                <button class="number" onclick="clickNumbers(this)" id="3">3</button>
-                <button class="number" onclick="clickNumbers(this)" id="dot">.</button>
+                <button class="operator" id="mul">×</button>
+                <button class="number" id="9">9</button>
+                <button class="number" id="6">6</button>
+                <button class="number" id="3">3</button>
+                <button class="dot" id="dot">.</button>
             </div>
             <div id="line">
-                <button class="operator" onclick="clickOperators(this)" id="div">÷</button> 
-                <button class="operator" onclick="clickClear()" id="clear">C</button>
-                <button class="operator" id="equal">=</button>
+                <button class="operator" id="div">÷</button> 
+                <button class="backspace" id="backspace"><img src="img/backspace.png" id="backspace-img"></button>
+                <button class="equal" id="equal">=</button>
             </div>
-            <div id="line">
-            </div>
+        </div>
+        <div id="how-to-use">
+            <h3 id="how-to-use-title">키보드 사용법</h3>
+            <p id="how-to-use-content">
+                [0~9] : 숫자 입력<br>
+                [+, -, *, /] : 연산자 입력<br>
+                [c or Delete] : 식 입력 칸 초기화<br>
+                [.] : 소수점 입력<br>
+                [Enter] : 계산 시작<br>
+                [Backspace] : 한 글자 지우기
+            </p>
         </div>
     </div>
     <script type="text/javascript" src="js/index.js"></script>
