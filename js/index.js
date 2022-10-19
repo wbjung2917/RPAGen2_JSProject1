@@ -203,7 +203,7 @@ function inputEqual(){
         console.log("0으로 나누는 식이 있습니다.");
     }
     //아무것도 입력안하고 버튼을 누른상태면
-    else if (isNaN(numberList)){
+    else if (isNaN(numberList[0])){
         //경고 출력
         console.log("빈 칸 입니다.");
     }
