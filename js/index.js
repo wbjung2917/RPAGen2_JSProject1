@@ -25,7 +25,7 @@ function inputClear(){
 function inputOperator(operator){    
     let formula=document.getElementById("formula");
     //빈칸일때는 -를 제외한 연산자를 입력할 수 없음
-    if(formula.innerHTML.trim()=="" && !operator=="-"){
+    if(formula.innerHTML.trim()=="" && operator!="-"){
         console.log("아무것도 없는곳에 연산자를 입력할 수 없습니다.");
     }
     //연산자를 입력한 뒤에 혹은 .의 뒤에 바로 연산자를 입력할 수 없음
