@@ -2,10 +2,19 @@
 let tempOperatorList=[];
 //연산자 종류를 저장할 array(상수)
 const operatorList=["+","-","×","÷"];
+//결과가 나온상태인지 여부를 표시하는 플래그
+let resultFlag=false;
 
 //숫자를 입력할 때 동작하는 함수
 function inputNumber(number){
     let formula=document.getElementById("formula");
+    let history=document.getElementById("history");
+
+    if(resultFlag==true){
+        formula.innerHTML="";
+        history.innerHTML="";
+        resultFlag=false;
+    }
     //식이 들어가는 칸에 number문자열 추가
     formula.innerHTML+=number;
 }
@@ -39,6 +48,8 @@ function inputOperator(operator){
             tempOperatorList.push(operator);
         }
         formula.innerHTML+=operator;
+        //식을 이어가고싶다는 표시이므로 resultFlag를 false로 바꿈
+        resultFlag=false;
     }
 }
 
@@ -229,6 +240,8 @@ function inputEqual(){
         formula.innerHTML=numberList[0];
         //연산자array초기화
         tempOperatorList=[];
+        //resultFlag true로 변환
+        resultFlag=true;
     }
 }
 
