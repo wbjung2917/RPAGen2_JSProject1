@@ -112,36 +112,49 @@ function divide(num1,num2){
 function calcMulDiv(numbers,operators){
     //곱셈 연산자나 나눗셈 연산자의 인덱스를 저장할 변수
     let location;
-    //무한반복
     while(true){
-        let result=0;
-        //곱셈의 위치를 찾음
-        location = operators.indexOf("×");
-        //곱셈이 없다면 나눗셈의 위치를 찾음
-        if(location==-1){
-            location = operators.indexOf("÷");
-        }
-        //곱셈과 나눗셈이 둘다 없다면 탈출
-        if(location==-1){
+        //곱셈연산자와 나눗셈연산자의 위치를 저장
+        let mulLocation=operators.indexOf("×");
+        let divLocation=operators.indexOf("÷");
+
+        //둘다 발견되지 않았다면 탈출
+        if(mulLocation==-1&&divLocation==-1){
             break;
         }
-        //찾은게 곱셈이면
-        else if(operators[location]=="×"){
-            //곱셈연산자 앞뒤의 수를 곱하고
-            result=multiply(numbers[location],numbers[location+1]);
-            //계산한 두 개의 수를 없애고 그 자리를 result로 대체함
-            numbers.splice(location,2,result);
-            //연산자array에서 계산한 연산자를 제거
-            operators.splice(location,1);
-        //찾은게 나눗셈이면
-        }else if(operators[location]=="÷"){
-            //나눗셈연산자 앞뒤의 수를 나누고
-            result=divide(numbers[location],numbers[location+1]);
-            //계산한 두 개의 수를 없애고 그 자리를 result로 대체함
-            numbers.splice(location,2,result);
-            //연산자array에서 계산한 연산자를 제거
-            operators.splice(location,1);            
+        //나눗셈만 발견되었다면 나눗셈의 위치를 location으로 설정
+        else if(mulLocation==-1&&divLocation!=-1){
+            location=divLocation;
         }
+        //곱셈만 발견되었다면 곱셈의 위치를 location으로 설정
+        else if(mulLocation!=-1&&divLocation==-1){
+            location=mulLocation;
+        } 
+        //둘다 발견되었을때
+        else{
+            //더 작은 값을 location으로 설정
+            if(mulLocation>divLocation){
+                location=divLocation;
+            }else{
+                location=mulLocation;
+            }
+        }
+
+        //계산결과를 저장할 result선언
+        let result;
+        //location의 연산자가 곱셈이면
+        if(operators[location]=="×"){
+            //result에 곱셈 결과를 저장
+            result=multiply(numbers[location],numbers[location+1]);
+        }
+        //location의 연산자가 나눗셈이면 
+        else if(operators[location]=="÷"){
+            //result에 나눗셈 결과를 저장
+            result=divide(numbers[location],numbers[location+1]);
+        }
+        //해당 결과를 연산자 앞뒤 숫자 두 개를 없애고 그자리에 저장
+        numbers.splice(location,2,result);
+        //계산한 연산자를 제거
+        operators.splice(location,1);
     }
 }
 
